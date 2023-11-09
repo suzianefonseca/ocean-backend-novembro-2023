@@ -60,6 +60,11 @@ app.put("/item/:id", function (req, res) {
   lista[id] = novoItem
   res.send("item atualizado com sucesso!")
 })
-
+app.delete("/item/:id", function (req, res) {
+ const id = req.params.id -1
+// remove item da lista
+ delete lista [id]
+  res.send("item removido com sucesso!")
+})
 app.listen(3000)
 
