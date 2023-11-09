@@ -48,9 +48,17 @@ app.post("/item", function (req, res) {
   // extraimos o nome do body da requisição
  const item= req.body.nome
  lista.push(item)
- 
+
  // exibimos uma mensagem de sucesso
  res.send("item adicionado com sucesso!")
+})
+
+//update - [put] /item/:id
+app.put("/item/:id", function (req, res) {
+  const id = req.params.id -1
+  const novoItem = req.body.nome
+  lista[id]=novoItem
+  res.send("Update")
 })
 
 app.listen(3000)
