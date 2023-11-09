@@ -5,8 +5,11 @@ app.get('/', function (req, res) {
   res.send('Hello World')
 })
 app.get("/oi", function ( req, res){
-  res.send("olan mundo")
+  res.send("olá mundo!")
+  
 })
+
+
 
 app.listen(3000)
 
